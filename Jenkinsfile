@@ -9,6 +9,7 @@ pipeline {
                     detailsURL: 'http://codedependant.net'
                 ) {
                     echo 'Hello World'
+                    echo 'ls -alh'
                 }
             }
         }

@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                withChecks(
-                    name: 'test',
-                    detailsURL: 'http://codedependant.net'
-                ) {
+                withChecks('test') {
                     echo 'Hello World'
                 }
             }

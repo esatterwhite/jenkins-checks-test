@@ -1,14 +1,25 @@
 pipeline {
     agent any
 
+    tools {
+      nodejs 'NodeJS 26'
+    }
     stages {
-        stage('Hello') {
+        stage('setup') {
+          steps {
+            withChecks('install') {
+              sh 'npm install'
+            }
+          }
+        }
+        stage('test') {
             steps {
                 withChecks(
                     name: 'test',
                     detailsURL: 'http://codedependant.net'
                 ) {
-                    echo 'Hello World'
+                  sh 'npm test'
+                  junit '.tap/test.xml'
                 }
             }
         }

@@ -1,0 +1,38 @@
+{
+  "name": "jenkins-checks-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "scripts/test-ci.sh",
+    "tap": "tap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esatterwhite/jenkins-checks-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/esatterwhite/jenkins-checks-test/issues"
+  },
+  "homepage": "https://github.com/esatterwhite/jenkins-checks-test#readme",
+  "tap": {
+    "browser": false,
+    "show-full-coverage": true,
+    "coverage-report": [
+      "text",
+      "lcov"
+    ],
+    "output-file": ".tap-out",
+    "serial": [],
+    "files": [
+      "test/"
+    ]
+  },
+  "devDependencies": {
+    "tap": "^21.7.4"
+  }
+}
